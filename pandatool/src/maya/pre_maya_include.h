@@ -44,3 +44,17 @@
 #include <maya/OpenMayaMac.h>
 #endif
 #endif
+
+#if MAYA_API_VERSION >= 20180000
+#include <maya/MApiNamespace.h>
+#else
+class MObject;
+class MDagPath;
+class MFloatArray;
+class MFnDagNode;
+class MFnMesh;
+class MFnNurbsCurve;
+class MFnNurbsSurface;
+class MPlug;
+class MPointArray;
+#endif
